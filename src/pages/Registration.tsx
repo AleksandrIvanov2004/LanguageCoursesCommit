@@ -24,19 +24,18 @@ const Register = () => {
         try {
             const response = await registerUser(payload);
             setSuccess({
-                isSuccess: true,
-                message: 'Регистация прошла успешно!!!',
+                isSuccess: true
             });
 
             setTimeout(() => {
                 navigate('/login'); 
-            }, 2000); 
+            }, 1000); 
 
         } catch (err: any) {
             setError({
                 isError: true,
                 message: err.response?.data?.message || 'Ошибка регистрации.',
-                code: err.response?.status,
+                code: err.response?.status
             });
         }
     };
@@ -106,11 +105,7 @@ const Register = () => {
                 </button>
             </div>
             {error.isError && <p style={{ color: 'red' }}>{error.message}</p>}
-            {success.isSuccess && <p style={{ color: 'green' }}>{success.message}</p>}
 
-            <div>
-                <button onClick={() => navigate('/login')}>Если вы уже зарегистрированы, войдите в систему</button>
-            </div>
         </div>
     );
 };
