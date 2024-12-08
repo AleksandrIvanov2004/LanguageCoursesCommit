@@ -2,8 +2,8 @@ import React from 'react';
 const Hello = () => {
     return (
         <div>
-            <h1>Welcome!!!</h1>
-            <p>Start by logging in or registering.</p>
+            <h1>Приветствуем!!!</h1>
+            <p>Войдите в систему или зарегистрируйтесь</p>
         </div>
     );
 };
