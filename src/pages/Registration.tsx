@@ -100,11 +100,15 @@ const Register = () => {
                         <option value="admin">Admin</option>
                     </select>
                 </div>
-                <button type="button" onClick={handleRegister}>
+                <button style={{marginTop: '20px'}} className="custom-button" onClick={handleRegister}>
                     Регистрироваться
                 </button>
             </div>
             {error.isError && <p style={{ color: 'red' }}>{error.message}</p>}
+
+            <div>
+                <button style={{marginTop: '20px'}} className="custom-button" onClick={() => navigate('/register')}>Уже имеете акаунт? Войти</button>
+            </div>
 
         </div>
     );

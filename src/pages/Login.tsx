@@ -3,6 +3,7 @@ import { loginUser } from '../service/logService';
 import { ErrorType } from '../types/errType';
 import { SuccessType } from '../types/successType';
 import { useNavigate } from 'react-router-dom'; 
+import '../ui/Button.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -79,7 +80,11 @@ const Login = () => {
                     />
                 </div>
                 {error.isError && <p style={{ color: 'red' }}>{error.message}</p>}
-                <button onClick={handleSubmit}>Войти</button>
+                <button style={{marginTop: '20px'}} className="custom-button" onClick={handleSubmit}>Войти</button>
+            </div>
+
+            <div>
+                <button style={{marginTop: '20px'}} className="custom-button" onClick={() => navigate('/register')}>Не имеете аккаунта? Зарегистрируйтесь</button>
             </div>
 
         </div>

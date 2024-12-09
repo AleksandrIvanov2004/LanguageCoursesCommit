@@ -1,0 +1,30 @@
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.custom-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.custom-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.custom-button:active {
+    background-color: #1c598a;
+}
+
+.custom-button:focus {
+    outline: none;
+}
